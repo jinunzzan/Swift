@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoG-BH-nyd">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="쇼핑" id="shi-aO-vCu"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    무엇을 구매하실 건가요?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31Z-9g-9lR">
+                                <rect key="frame" x="16" y="91" width="358" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VzY-fz-JXI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aaX-QR-v1Y">
+                                <rect key="frame" x="0.0" y="151" width="390" height="659"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-v9-d3S">
+                                <rect key="frame" x="298.33333333333331" y="104" width="53.666666666666686" height="34"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="추가"/>
+                                <connections>
+                                    <action selector="addBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWy-C2-Z0M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UoG-BH-nyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Tv-ly-jyo"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5lU-Qq-wfO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ly6-v9-d3S" secondAttribute="trailing" constant="38" id="6N0-3Z-Ql9"/>
+                            <constraint firstItem="ly6-v9-d3S" firstAttribute="centerY" secondItem="31Z-9g-9lR" secondAttribute="centerY" id="DRv-YQ-Wym"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DeF-Dr-k7a"/>
+                            <constraint firstItem="UoG-BH-nyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FEf-9S-ROJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aaX-QR-v1Y" secondAttribute="trailing" id="Ier-EQ-yNH"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="top" secondItem="31Z-9g-9lR" secondAttribute="bottom" id="K2M-et-Yc1"/>
+                            <constraint firstItem="UoG-BH-nyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oys-cC-6yR"/>
+                            <constraint firstItem="ly6-v9-d3S" firstAttribute="top" secondItem="UoG-BH-nyd" secondAttribute="bottom" constant="13" id="U2K-WX-4jP"/>
+                            <constraint firstItem="31Z-9g-9lR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cHT-rO-6s6"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="top" secondItem="31Z-9g-9lR" secondAttribute="bottom" id="eMz-bY-WUn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="31Z-9g-9lR" secondAttribute="trailing" constant="16" id="gUO-mY-zgm"/>
+                            <constraint firstItem="ly6-v9-d3S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="kuW-Z8-0kP"/>
+                            <constraint firstItem="ly6-v9-d3S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="104" id="mUE-md-GaM"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pT2-1q-3mq"/>
+                            <constraint firstItem="UoG-BH-nyd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qmL-c4-Adg"/>
+                            <constraint firstItem="31Z-9g-9lR" firstAttribute="top" secondItem="UoG-BH-nyd" secondAttribute="bottom" id="thp-s7-G8J"/>
+                            <constraint firstItem="UoG-BH-nyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vyC-2i-ZU1"/>
+                            <constraint firstItem="aaX-QR-v1Y" firstAttribute="top" secondItem="ly6-v9-d3S" secondAttribute="bottom" constant="13" id="weV-Yv-4XW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="ly6-v9-d3S" id="iTi-Hz-KAS"/>
+                        <outlet property="tableView" destination="aaX-QR-v1Y" id="CL1-BW-mFc"/>
+                        <outlet property="textField" destination="31Z-9g-9lR" id="b8y-6E-kLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32.307692307692307" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
