@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebView2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP8-ml-yS4">
+                                <rect key="frame" x="0.0" y="47" width="390" height="723"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1t-s1-JUB">
+                                <rect key="frame" x="160.66666666666666" y="778" width="68.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Naver"/>
+                                <connections>
+                                    <action selector="goNaver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASP-5f-ebJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-dj-JdT">
+                                <rect key="frame" x="14.666666666666664" y="778" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Google"/>
+                                <connections>
+                                    <action selector="goGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6y-cQ-cbK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOw-ov-ho2">
+                                <rect key="frame" x="296.33333333333331" y="778" width="69" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Daum"/>
+                                <connections>
+                                    <action selector="goDaum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BY3-3y-YHT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ROJ-dj-JdT" firstAttribute="top" secondItem="bP8-ml-yS4" secondAttribute="bottom" constant="8" symbolic="YES" id="0TZ-CH-JnZ"/>
+                            <constraint firstItem="bP8-ml-yS4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="14l-hN-fir"/>
+                            <constraint firstItem="bP8-ml-yS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2ZO-qx-u3n"/>
+                            <constraint firstItem="bP8-ml-yS4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4GN-tp-VFY"/>
+                            <constraint firstItem="vOw-ov-ho2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E1t-s1-JUB" secondAttribute="trailing" constant="8" symbolic="YES" id="9n7-gm-Pos"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bP8-ml-yS4" secondAttribute="bottom" constant="40" id="HHI-It-c0x"/>
+                            <constraint firstItem="E1t-s1-JUB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ROJ-dj-JdT" secondAttribute="trailing" constant="8" symbolic="YES" id="Phw-DV-KZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOw-ov-ho2" secondAttribute="trailing" constant="24.670000000000002" id="Rzn-1X-q06"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bP8-ml-yS4" secondAttribute="trailing" id="hru-8Z-O1n"/>
+                            <constraint firstItem="E1t-s1-JUB" firstAttribute="top" secondItem="bP8-ml-yS4" secondAttribute="bottom" constant="8" symbolic="YES" id="kiz-wW-fAb"/>
+                            <constraint firstItem="bP8-ml-yS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o4a-h1-TlY"/>
+                            <constraint firstItem="bP8-ml-yS4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oUb-nK-t60"/>
+                            <constraint firstItem="ROJ-dj-JdT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14.67" id="tpj-iz-JPU"/>
+                            <constraint firstItem="E1t-s1-JUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wG0-Su-aHm"/>
+                            <constraint firstItem="vOw-ov-ho2" firstAttribute="top" secondItem="bP8-ml-yS4" secondAttribute="bottom" constant="8" symbolic="YES" id="wP8-yz-LFb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="bP8-ml-yS4" id="kD1-Ch-nS7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.84615384615384" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
