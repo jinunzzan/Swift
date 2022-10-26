@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class ViewController: UIViewController {
@@ -40,6 +41,7 @@ extension ViewController: UITableViewDataSource {
         let movie = movies[indexPath.row]
         
         let image = cell.viewWithTag(3) as? UIImageView
+        
         image?.image = UIImage(named: movie.img)
         image?.layer.cornerRadius = 10
         
@@ -93,8 +95,12 @@ extension ViewController: UITableViewDataSource {
 //        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
 //        present(vc, animated: true, completion: nil)
          */
-        let vc = DetailViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        vc.movie = movies[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         // push
         
     }
